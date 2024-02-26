@@ -25,9 +25,9 @@ local library = {
     hovers = {},
     Relations = {},
     folders = {
-        main = "Atlanta",
-        assets = "Atlanta/Images",
-        configs = "Atlanta/Configs"
+        main = "Krypton",
+        assets = "Krypton/Images",
+        configs = "Krypton/Configs"
     },
     shared = {
         initialized = false,
