@@ -285,19 +285,19 @@ do
     --
     Utility.SaveConfig = function(Config)
         writefile(
-            "Abyss/Configs/" .. tostring(game.PlaceId) .. "/" .. Config .. ".json", 
+            "Celestial/Configs/" .. tostring(game.PlaceId) .. "/" .. Config .. ".json", 
             HttpService:JSONEncode(UISettings.Flags)
         )
     end
     --
     Utility.DeleteConfig = function(Config)
         delfile(
-            "Abyss/Configs/" .. tostring(game.PlaceId) .. "/" .. Config .. ".json"
+            "Celestial/Configs/" .. tostring(game.PlaceId) .. "/" .. Config .. ".json"
         )
     end
     --
     Utility.LoadConfig = function(Config)
-        local Config = HttpService:JSONDecode(readfile("Abyss/Configs/" .. tostring(game.PlaceId) .. "/" .. Config .. ".json"))
+        local Config = HttpService:JSONDecode(readfile("Celestial/Configs/" .. tostring(game.PlaceId) .. "/" .. Config .. ".json"))
         --
         Library.Flags = LoadedConfig
         --
@@ -347,7 +347,7 @@ do
             Max = 2, Current = 0
         }
         --
-        Library.Theme.Logo = Utility.AddImage("Abyss/Assets/UI/Logo2.png", "https://i.imgur.com/HI4UTmZ.png")
+        Library.Theme.Logo = Utility.AddImage("Celestial/Assets/UI/Logo2.png", "https://cdn.discordapp.com/attachments/925964650712006697/1215075722494742568/Picsart_24-03-06_06-45-20-141.jpg?ex=65fb6e73&is=65e8f973&hm=c8955f55b1356518215175f8caa61f6f76224dc185d14a42a0e3d04e1e9549a5&")
         --
         local WindowOutline = Utility.AddDrawing("Square", {
             Size = WindowSize,
@@ -473,24 +473,24 @@ do
         --
         Window.SetText(0, "UI Initialization [ Downloading ]")
         --
-        Utility.AddFolder("Abyss")
-        Utility.AddFolder("Abyss/Caches")
-        Utility.AddFolder("Abyss/Assets")
-        Utility.AddFolder("Abyss/Assets/UI")
-        Utility.AddFolder("Abyss/Configs")
-        Utility.AddFolder("Abyss/Scripts")
+        Utility.AddFolder("Celestial")
+        Utility.AddFolder("Celestial/Caches")
+        Utility.AddFolder("Celestial/Assets")
+        Utility.AddFolder("Celestial/Assets/UI")
+        Utility.AddFolder("Celestial/Configs")
+        Utility.AddFolder("Celestial/Scripts")
         --
-        Library.Theme.Gradient = Utility.AddImage("Abyss/Assets/UI/Gradient.png", "https://raw.githubusercontent.com/mvonwalk/Exterium/main/Gradient.png")
-        -- Library.Theme.SecondIcon = Utility.AddImage("Abyss/Assets/UI/Gradient.png", "https://raw.githubusercontent.com/mvonwalk/Exterium/main/Gradient.png")
-        Library.Theme.Hue = Utility.AddImage("Abyss/Assets/UI/Hue.png", "https://raw.githubusercontent.com/mvonwalk/Exterium/main/HuePicker.png")
-        Library.Theme.Saturation = Utility.AddImage("Abyss/Assets/UI/Saturation.png", "https://raw.githubusercontent.com/mvonwalk/Exterium/main/SaturationPicker.png")
-        Library.Theme.SaturationCursor = Utility.AddImage("Abyss/Assets/UI/HueCursor.png", "https://raw.githubusercontent.com/mvonwalk/splix-assets/main/Images-cursor.png")
+        Library.Theme.Gradient = Utility.AddImage("Celestial/Assets/UI/Gradient.png", "https://raw.githubusercontent.com/mvonwalk/Exterium/main/Gradient.png")
+        -- Library.Theme.SecondIcon = Utility.AddImage("Celestial/Assets/UI/Gradient.png", "https://raw.githubusercontent.com/mvonwalk/Exterium/main/Gradient.png")
+        Library.Theme.Hue = Utility.AddImage("Celestial/Assets/UI/Hue.png", "https://raw.githubusercontent.com/mvonwalk/Exterium/main/HuePicker.png")
+        Library.Theme.Saturation = Utility.AddImage("Celestial/Assets/UI/Saturation.png", "https://raw.githubusercontent.com/mvonwalk/Exterium/main/SaturationPicker.png")
+        Library.Theme.SaturationCursor = Utility.AddImage("Celestial/Assets/UI/HueCursor.png", "https://raw.githubusercontent.com/mvonwalk/splix-assets/main/Images-cursor.png")
         --
-        Library.Theme.Astolfo = Utility.AddImage("Abyss/Assets/UI/Astolfo.png", "https://i.imgur.com/T20cWY9.png")
-        Library.Theme.Aiko = Utility.AddImage("Abyss/Assets/UI/Aiko.png", "https://i.imgur.com/1gRIdko.png")
-        Library.Theme.Rem = Utility.AddImage("Abyss/Assets/UI/Rem.png", "https://i.imgur.com/ykbRkhJ.png")
-        Library.Theme.Violet = Utility.AddImage("Abyss/Assets/UI/Violet.png", "https://i.imgur.com/7B56w4a.png")
-        Library.Theme.Asuka = Utility.AddImage("Abyss/Assets/UI/Asuka.png", "https://i.imgur.com/3hwztNM.png")
+        Library.Theme.Astolfo = Utility.AddImage("Celestial/Assets/UI/Astolfo.png", "https://i.imgur.com/T20cWY9.png")
+        Library.Theme.Aiko = Utility.AddImage("Celestial/Assets/UI/Aiko.png", "https://i.imgur.com/1gRIdko.png")
+        Library.Theme.Rem = Utility.AddImage("Celestial/Assets/UI/Rem.png", "https://i.imgur.com/ykbRkhJ.png")
+        Library.Theme.Violet = Utility.AddImage("Celestial/Assets/UI/Violet.png", "https://i.imgur.com/7B56w4a.png")
+        Library.Theme.Asuka = Utility.AddImage("Celestial/Assets/UI/Asuka.png", "https://i.imgur.com/3hwztNM.png")
         --
         Window.SetText(1, "Checking Assets")
         --
@@ -3989,7 +3989,7 @@ do
             
             Theme:Dropdown({
                 Title = "Theme",
-                List = {"Default", "Neverlose", "Fatality", "Aimware", "Onetap", "Vape", "Gamesesne", "OldAbyss"},
+                List = {"Default", "Neverlose", "Fatality", "Aimware", "Onetap", "Vape", "Gamesesne", "OldCelestial"},
                 Default = "Default",
                 Callback = function(Choosen)
                     if Choosen == "Default" then
@@ -4072,7 +4072,7 @@ do
                             LightContrast = Color3.fromHex("#171717"),
                             DarkContrast = Color3.fromHex("#0c0c0c"),
                         })
-                    elseif Choosen == "OldAbyss" then
+                    elseif Choosen == "OldCelestial" then
                         Library:UpdateTheme({
                             Outline = Color3.fromHex("#0a0a0a"),
                             Inline = Color3.fromHex("#322850"),
