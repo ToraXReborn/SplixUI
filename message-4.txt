@@ -347,7 +347,7 @@ do
             Max = 2, Current = 0
         }
         --
-        Library.Theme.Logo = Utility.AddImage("Celestial/Assets/UI/Logo2.png", "https://cdn.discordapp.com/attachments/925964650712006697/1215075722494742568/Picsart_24-03-06_06-45-20-141.jpg?ex=65fb6e73&is=65e8f973&hm=c8955f55b1356518215175f8caa61f6f76224dc185d14a42a0e3d04e1e9549a5&")
+        Library.Theme.Logo = Utility.AddImage("Celestial/Assets/UI/Logo2.png", "https://cdn.discordapp.com/attachments/925964650712006697/1215077506089091102/Picsart_24-03-06_06-45-20-141-removebg-preview.png?ex=65fb701c&is=65e8fb1c&hm=ea7de369aa28c15533955ce6e67cf5f7ca35b552bfd422fa85ffc0cc47574baa&")
         --
         local WindowOutline = Utility.AddDrawing("Square", {
             Size = WindowSize,
